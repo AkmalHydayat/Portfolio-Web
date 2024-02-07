@@ -1,0 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Acme&family=Antic+Slab&family=Atma:wght@300;400;500;600&family=Titillium+Web:wght@200;300;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  background-color: #e9ebea;
+  scroll-behavior: smooth;
+}
