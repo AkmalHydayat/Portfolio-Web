@@ -1,4 +1,14 @@
+
+import { motion, useInView } from "framer-motion";
+// import { useEffect } from "react";
+import { useRef } from "react";
+
 const AboutMe = () => {
+  const SectionHeadRef = useRef(null);
+  const skillRef = useRef(null);
+  const sectionHeadIsInView = useInView(SectionHeadRef)
+  const skillIsInView = useInView(skillRef)
+
   const tech = [
     {
       id: 1,
@@ -62,22 +72,56 @@ const AboutMe = () => {
     },
     {
       id: 13,
-      name: "ChakraUi",
-      img: "tech/chakraui.png",
+      name: "Figma",
+      img: "tech/figma.png",
     },
   ];
 
+
   return (
-    <div className="space-y-10 md:space-y-0 pb-10" id="aboutme">
+    <div
+
+      className="space-y-10 md:space-y-0 relative pt-10 pb-8 mt-14 md:pt-10 lg:pt-8 md:pb-0 md:mt-0 lg:mt-5" id="aboutme">
       <div>
-        <h1 className="font-Atma text-4xl md:text-4xl text-center">About Me</h1>
-        <div className="relative flex justify-center -top-16 -z-10">
+        <motion.div
+          ref={SectionHeadRef}
+          animate={{
+            scale: sectionHeadIsInView ? [0, 1] : 0,
+            opacity: sectionHeadIsInView ? 1 : 0
+          }}
+          transition={{ type: "spring", stiffness: 100, delay: 0.4 }}
+          initial={{ opacity: 0.1 }}
+
+        >
+          <h1 className="font-Atma text-4xl md:text-4xl text-center">
+            About Me
+          </h1>
+
+        </motion.div>
+        <motion.div
+          ref={SectionHeadRef}
+          animate={{
+            scale: sectionHeadIsInView ? [0, 1] : 0,
+            opacity: sectionHeadIsInView ? 1 : 0
+          }}
+          transition={{ type: "spring", stiffness: 60, delay: 0.2 }}
+          initial={{ opacity: 0.1 }}
+          className="relative flex justify-center -top-16 -z-10">
           <img src="/head-bg.png" alt="" className="absolute" />
-        </div>
+        </motion.div>
+
+
       </div>
       <div className="flex flex-col space-y-12 md:flex-row md:space-y-0 md:space-x-10 h-fit md:h-[500px] md:flex md:items-center ">
         <div className="md:flex-1">
-          <div className=" md:flex md:items-center md:justify-center md:h-full  ">
+          <motion.div
+            animate={{
+              scale: skillIsInView ? [0, 1] : 0,
+              opacity: skillIsInView ? 1 : 0
+            }}
+            transition={{ type: "spring", stiffness: 60, delay: 0.4 }}
+            initial={{ opacity: 0 }}
+            className=" md:flex md:items-center md:justify-center md:h-full  ">
             <div className="font-TitiliumWeb text-xl/6 lg:text-2xl/8 text-center md:max-w-[80%] ">
               Passionate and seasoned Web Developer with a strong focus on
               frontend development. Proficient in JavaScript and well-versed in
@@ -85,27 +129,41 @@ const AboutMe = () => {
               dedicated to delivering efficient, scalable, and visually
               appealing web applications.
             </div>
-          </div>
-          <div className="relative flex justify-center -inset-y-36 md:-inset-y-60 lg:-inset-y-[240px] -z-10">
+          </motion.div>
+          <motion.div
+
+            animate={{
+              scale: skillIsInView ? [0, 1] : 0,
+              opacity: skillIsInView ? 1 : 0
+            }}
+            transition={{ type: "spring", stiffness: 60, delay: 0.2 }}
+            initial={{ opacity: 0 }}
+            className="relative flex justify-center -inset-y-36 md:-inset-y-60 lg:-inset-y-[240px] -z-10">
             <img
               src="/Ellipse 11.png"
               alt=""
               className="absolute w-40 md:w-60 opacity-60"
             />
-          </div>
+          </motion.div>
         </div>
-        <div className=" md:flex-1">
-          <div className="w-fit gap-3 grid grid-cols-5 items-center place-items-center mx-auto relative ">
+        <div ref={skillRef} className=" md:flex-1" >
+          <motion.div
+
+            animate={{
+              scale: skillIsInView ? [0, 1] : 0,
+              opacity: skillIsInView ? 1 : 0
+            }}
+            transition={{ type: "spring", stiffness: 80, delay: 0.4 }}
+            initial={{ opacity: 0 }}
+            className="w-fit gap-3 grid grid-cols-5 items-center place-items-center mx-auto relative ">
             {tech.map((tech) => (
               <div
                 className={`
                 
-                ${
-                  tech.id === 1 || tech.id === 13 ? "col-span-5 scale-90 " : ""
-                } 
-                ${
-                  tech.id === 2 || tech.id === 10 ? "col-start-2 scale-90" : ""
-                } 
+                ${tech.id === 1 || tech.id === 13 ? "col-span-5 scale-90 " : ""
+                  } 
+                ${tech.id === 2 || tech.id === 10 ? "col-start-2 scale-90" : ""
+                  } 
                 ${tech.id === 3 ? "scale-95" : ""} 
                 ${tech.id === 4 || tech.id === 12 ? "scale-90" : ""} 
                 ${tech.id === 5 ? "col-start-1 scale-90" : ""} 
@@ -113,11 +171,10 @@ const AboutMe = () => {
                 ${tech.id === 8 ? "scale-95" : ""} 
                 ${tech.id === 9 ? "scale-90" : ""} 
                 ${tech.id === 11 ? "scale-95" : ""} 
-                ${
-                  tech.id === 7
+                ${tech.id === 7
                     ? "scale-[1.2] lg:scale-[1.2] md:scale-[1.1] p-1 bg-yellow hover:scale-[1.2]  animate-wiggleSlow"
                     : ""
-                } 
+                  } 
                  shadow-cus bg-light/60 rounded-xl sm:rounded-xl hover:scale-105 transition-transform ease-in-out  w-[65px] md:w-[60px] lg:w-[70px] h-[65px] md:h-[60px] lg:h-[70px] flex justify-center items-center relative group`}
                 key={tech.id}
               >
@@ -127,27 +184,33 @@ const AboutMe = () => {
                   className="relative object-cover p-2.5 "
                 />
                 <div
-                  className={`${
-                    tech.id === 7
-                      ? "hidden"
-                      : "absolute invisible group-hover:-top-4 md:group-hover:-top-5 group-hover:opacity-100 top-5 scale-50 group-hover:scale-100 opacity-0 rounded-md text-xs lg:text-sm bg-gradient-to-tr from-red/90  to-yellow/90 text-black font-AnticSlab group-hover:visible  font-semibold px-2 py-0.5"
-                  } transition-all ease-in-out`}
+                  className={`${tech.id === 7
+                    ? "hidden"
+                    : "absolute invisible group-hover:-top-4 md:group-hover:-top-5 group-hover:opacity-100 top-5 scale-50 group-hover:scale-100 opacity-0 rounded-md text-xs lg:text-sm bg-gradient-to-tr from-red/90  to-yellow/90 text-black font-AnticSlab group-hover:visible  font-semibold px-2 py-0.5"
+                    } transition-all ease-in-out`}
                 >
                   {tech.name}
                 </div>
               </div>
             ))}
-          </div>
-          <div className="relative  flex justify-center -inset-y-[340px] -inset-x-[6px] md:-inset-y-[330px] md:-inset-x-[4px] lg:-inset-y-[350px] lg:inset-x-1 -z-10">
+          </motion.div>
+          <motion.div
+            animate={{
+              scale: skillIsInView ? [0, 1] : 0,
+              opacity: skillIsInView ? 1 : 0
+            }}
+            transition={{ type: "spring", stiffness: 80, delay: 0.2 }}
+            initial={{ opacity: 0 }}
+            className="relative  flex justify-center -inset-y-[340px] -inset-x-[6px] md:-inset-y-[330px] md:-inset-x-[4px] lg:-inset-y-[350px] lg:inset-x-1 -z-10">
             <img
               src="/head-bg.png"
               alt=""
               className="absolute w-80 opacity-80 animate-spin-slow"
             />
-          </div>
+          </motion.div>
         </div>
       </div>
-    </div>
+    </div >
   );
 };
 

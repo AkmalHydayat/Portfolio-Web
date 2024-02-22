@@ -1,8 +1,7 @@
 import { useState } from "react";
-
+import { motion } from "framer-motion";
 // eslint-disable-next-line react/prop-types
 const NavBar = ({ menuShow, handleMenuStatus }) => {
-  // const [hamburger, setHamburger] = useState(false);
 
   const [lastScrollY, setLastScrollY] = useState(0);
   const [scroll, setScroll] = useState(false);
@@ -45,7 +44,6 @@ const NavBar = ({ menuShow, handleMenuStatus }) => {
       setShowNavbar(true);
     } else if (window.scrollY > window.screenY + 200) {
       setShowNavbar(false);
-      // setHamburger(false);
       handleMenuStatus(false);
     }
   };
@@ -55,61 +53,63 @@ const NavBar = ({ menuShow, handleMenuStatus }) => {
 
   return (
     <div className="relative">
-      <div
-        className={`${
-          scroll
-            ? "bg-light/95  shadow-md translate-y-0"
-            : "bg-light/95 shadow-none -translate-y-0.5"
-        } ${
-          showNavbar
-            ? "visible translate-y-0 fixed opacity-100 "
-            : "invisible fixed opacity-0 -translate-y-1"
-        } h-[60px] fixed w-full z-50 top-0 md:h-[70px] transition-all ease-linear `}
+      <motion.div
+        animate={{ scale: [0, 1] }}
+        transition={{ type: "spring", stiffness: 70 }}
+        initial={{ opacity: 1 }}
       >
         <div
-          className={`flex items-center h-[60px] sticky top-0 md:h-[70px] justify-between max-w-[90%] md:max-w-[90%] lg:max-w-[85%] mx-auto`}
+          className={`${scroll
+            ? "bg-light/95  shadow-md translate-y-0"
+            : "bg-light/95 shadow-none -translate-y-0.5"
+            } ${showNavbar
+              ? "visible translate-y-0 fixed opacity-100 "
+              : "invisible fixed opacity-0 -translate-y-1"
+            } h-[60px] fixed w-full z-50 top-0 md:h-[70px] transition-all ease-linear `}
         >
-          <img
-            id="logo"
-            src="/Logo.png"
-            alt=""
-            className="w-36 md:w-36 lg:w-40 "
-          />
-          <button
-            className="visible w-[30px] md:invisible md:w-0 md:absolute hover:cursor-pointer  p-1"
-            onClick={() => {
-              // setHamburger(!menuShow);
-              handleMenuStatus(!menuShow);
-            }}
-          >
-            <svg viewBox="0 0 15 15">
-              <path
-                id="nav-menu"
-                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
-              />
-            </svg>
-          </button>
           <div
-            className={`${
-              menuShow
+            className={`flex items-center h-[60px] sticky top-0 md:h-[70px] justify-between max-w-[90%] md:max-w-[90%] lg:max-w-[85%] mx-auto`}
+          >
+            <img
+              id="logo"
+              src="/Logo.png"
+              alt=""
+              className="w-36 md:w-36 lg:w-40 "
+            />
+            <button
+              className="visible w-[30px] md:invisible md:w-0 md:absolute hover:cursor-pointer  p-1"
+              onClick={() => {
+                handleMenuStatus(!menuShow);
+              }}
+            >
+              <svg viewBox="0 0 15 15">
+                <path
+                  id="nav-menu"
+                  d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
+                />
+              </svg>
+            </button>
+            <div
+              className={`${menuShow
                 ? "visible absolute md:static rounded-xl bg-yellow font-semibold md:bg-light py-3 md:py-0 opacity-100 h-fit mt-16 md:mt-0 md:font-medium scale-100 top-0  end-2 w-36  text-center md:visible md:top-0 md:end-0 md:z-0  md:w-fit md:text-end md:translate-x-0 md:translate-y-0 md:scale-100 md:opacity-100"
                 : "invisible md:visible absolute top-0  md:static rounded-xl md:top-auto bg-yellow md:bg-transparent py-3 md:py-0 h-fit -end-5 md:end-0 -z-10 md:z-0 w-36 md:w-fit text-center md:text-end opacity-0 translate-x-2 md:translate-x-0 -translate-y-5 md:translate-y-0 scale-50 md:scale-100 md:opacity-100"
-            } md:block transition-all ease-in-out duration-200`}
-          >
-            <div className="font-AnticSlab flex flex-col md:mt-0 md:flex-row space-y-1 md:space-y-0 lg:space-x-10 lg:text-xl md:text-lg md:space-x-10 ">
-              {navbarMenu.map((navbar) => (
-                <a
-                  key={navbar.id}
-                  href={navbar.link}
-                  className="hover:bg-blue md:hover:bg-transparent hover:text-white  py-1 md:py-0 md:hover:text-yellow md:hover:font-semibold  transition-all ease-in-out"
-                >
-                  {navbar.name}
-                </a>
-              ))}
+                } md:block transition-all ease-in-out duration-200`}
+            >
+              <div className="font-AnticSlab flex flex-col md:mt-0 md:flex-row space-y-1 md:space-y-0 lg:space-x-10 lg:text-xl md:text-lg md:space-x-10 ">
+                {navbarMenu.map((navbar) => (
+                  <a
+                    key={navbar.id}
+                    href={navbar.link}
+                    className="hover:bg-blue md:hover:bg-transparent hover:text-white  py-1 md:py-0 md:hover:text-yellow md:hover:font-semibold  transition-all ease-in-out"
+                  >
+                    {navbar.name}
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

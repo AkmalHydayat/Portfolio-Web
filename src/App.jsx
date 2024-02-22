@@ -24,7 +24,7 @@ function App() {
         className=" overflow-hidden "
       >
         <NavBar menuShow={menuShow} handleMenuStatus={handleMenuStatus} />
-        <div className="max-w-[90%] md:max-w-[90%] lg:max-w-[85%] mx-auto space-y-5 ">
+        <div className="max-w-[90%] md:max-w-[90%] lg:max-w-[85%] mx-auto ">
           <HomePage />
           <AboutMe />
           <Portfolio />
