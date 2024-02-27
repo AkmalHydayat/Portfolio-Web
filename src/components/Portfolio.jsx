@@ -122,7 +122,7 @@ const Portfolio = () => {
       name: "Web Profile",
       img: "webprofile.png",
       url: "https://akmalhydayat.vercel.app/",
-      git: "",
+      git: "https://github.com/AkmalHydayat/Portfolio-Web",
       backgroundColor: "bg-[#E63946]",
       detail:
         "Aesthetic and functional in design, this portfolio provides an in-depth look at a person's skills, projects and experience in the world of work. With a responsive display, this portfolio provides a seamless user experience on both computer and mobile devices.",

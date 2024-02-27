@@ -77,10 +77,6 @@ const AboutMe = () => {
     },
   ];
 
-  const handleDownloadResume = () => {
-    const pdfUrl = '/public/Document/Resume Akmal Hydayat.pdf';
-    window.open(pdfUrl, '_blank');
-  };
   return (
     <div
 
@@ -132,7 +128,10 @@ const AboutMe = () => {
               dedicated to delivering efficient, scalable, and visually
               appealing web applications.
             </div>
-            <button onClick={handleDownloadResume} className="flex space-x-3 w-fit items-center shadow-cus font-Atma mt-8 text-xl/6 lg:text-2xl/7 text-center bg-yellow px-3 py-1.5 rounded-md hover:scale-[1.02] transition-all ease-in-out group">
+            <button onClick={() => window.open(
+              "https://drive.google.com/file/d/1foOeu2zhiDupeuTZ-jhGpUyghlp7pyR_/view",
+              "_blank"
+            )} className="flex space-x-3 w-fit items-center shadow-cus font-Atma mt-8 text-xl/6 lg:text-2xl/7 text-center bg-yellow px-3 py-1.5 rounded-md hover:scale-[1.02] transition-all ease-in-out group">
               <div className="">View Resume</div>
               <div className="w-[20px] h-[20px] animate-BounceCos">
                 <svg viewBox="0 0 600 600" fill="">
