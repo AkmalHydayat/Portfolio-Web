@@ -158,11 +158,11 @@ const Portfolio = () => {
       id: 3,
       name: "Diamond Store",
       img: "diamondstore.png",
-      url: "",
-      git: "",
+      url: "https://akmalhydayat.github.io/Diamond-Store/",
+      git: "https://github.com/AkmalHydayat/Diamond-Store",
       backgroundColor: "bg-[#FF5F04]",
       detail:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, est voluptatibus delectus a sunt molestiae sapienteomnis harum in quibusdam architecto libero.",
+        "A prototype diamond store that gamers use to purchase game credits. The fast search feature, automatic price calculator, and integration of flexible payment methods as well as a responsive and intuitive interface will certainly provide a fast and efficient purchasing experience for gamers.",
       techStack: [
         {
           id: 1,
@@ -343,7 +343,7 @@ const Portfolio = () => {
                       </button>
                     </div>
                   </div>
-                  <div className="h-[75%] sm:h-[72%] bg-gray rounded-b-lg rounded-e-lg flex items-start pt-1 sm:pt-0">
+                  <div className="h-[75%] sm:h-[72%] bg-gray rounded-b-lg rounded-e-lg flex items-center  sm:pt-0">
                     <div className="text-xs/3 sm:text-sm/4 px-3 py-0.5 font-TitiliumWeb text-justify ">
                       {project.detail}
                     </div>
