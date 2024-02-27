@@ -3,6 +3,37 @@ import { useRef } from "react";
 
 /* eslint-disable react/no-unescaped-entities */
 const Contact = () => {
+  const ContactList = [
+    {
+      id: 1,
+      name: "Gmail",
+      img: "/gmail.png",
+      url: "https://mail.google.com/mail/u/0/?fs=1&tf=1&view=cm&source=mailto&to=akmalhydayat69@gmail.com",
+      delay: "0.6"
+    },
+    {
+      id: 2,
+      name: "LinkedIn",
+      img: "/linkedin.png",
+      url: "https://www.linkedin.com/in/akmal-hydayat/",
+      delay: "0.7"
+    },
+    {
+      id: 3,
+      name: "GitHub",
+      img: "/tech/github.png",
+      url: "https://github.com/AkmalHydayat",
+      delay: "0.8"
+    },
+    {
+      id: 4,
+      name: "WhatsApp",
+      img: "/wa2.png",
+      url: "https://wa.me/088271743968",
+      delay: "0.9"
+    },
+
+  ];
   const SectionHeadRef = useRef(null);
   const BodySectionRef = useRef(null);
   const sectionHeadIsInView = useInView(SectionHeadRef)
@@ -120,87 +151,33 @@ const Contact = () => {
           </div>
         </div>
         <div className="  flex space-x-3 lg:space-x-5 justify-center">
-          <motion.div
-
-            animate={{
-              scale: bodySectionIsInView ? [0, 1] : 0,
-              opacity: bodySectionIsInView ? 1 : 0
-            }}
-            transition={{ type: "spring", stiffness: 60, delay: 0.6 }}
-            initial={{ opacity: 0.1 }}
-            className=" basis-14 lg:basis-16">
-            <button
-
-              onClick={() =>
-                window.open(
-                  "https://mail.google.com/mail/u/0/?fs=1&tf=1&view=cm&source=mailto&to=akmalhydayat69@gmail.com",
-                  "_blank"
-                )
-              }
-              className=" shadow-cus bg-light/60 rounded-xl sm:rounded-2xl flex items-center justify-center  hover:scale-105 transition-transform ease-in-out hover:cursor-pointer"
-            >
-              <img
-                src="/gmail.png"
-                alt=""
-                className="relative object-cover p-2.5"
-              />
-            </button>
-          </motion.div>
-          <motion.div
-            animate={{
-              scale: bodySectionIsInView ? [0, 1] : 0,
-              opacity: bodySectionIsInView ? 1 : 0
-            }}
-            transition={{ type: "spring", stiffness: 60, delay: 0.7 }}
-            initial={{ opacity: 0.1 }}
-            className="basis-14 lg:basis-16">
-            <button
-              onClick={() =>
-                window.open(
-                  "https://www.linkedin.com/in/akmal-hydayat/",
-                  "_blank"
-                )
-              }
-              className=" shadow-cus bg-light/60 rounded-xl sm:rounded-2xl  flex items-center justify-center hover:scale-105 transition-transform ease-in-out hover:cursor-pointer"
-            >
-              <img
-                src="/linkedin.png"
-                alt=""
-                className="object-cover relative p-2.5"
-              />
-            </button>
-          </motion.div>
-          <motion.div
-            animate={{
-              scale: bodySectionIsInView ? [0, 1] : 0,
-              opacity: bodySectionIsInView ? 1 : 0
-            }}
-            transition={{ type: "spring", stiffness: 60, delay: 0.8 }}
-            initial={{ opacity: 0.1 }}
-            className="basis-14 lg:basis-16">
-            <button className=" shadow-cus bg-light/60 rounded-xl sm:rounded-2xl  flex items-center justify-center hover:scale-105 transition-transform ease-in-out hover:cursor-pointer">
-              <img
-                src="/tech/github.png"
-                alt=""
-                className="object-cover relative p-2.5"
-              />
-            </button>
-          </motion.div>
-          <motion.div
-            animate={{
-              scale: bodySectionIsInView ? [0, 1] : 0,
-              opacity: bodySectionIsInView ? 1 : 0
-            }}
-            transition={{ type: "spring", stiffness: 60, delay: 0.9 }}
-            initial={{ opacity: 0.1 }}
-            className="basis-14 lg:basis-16">
-            <button
-              onClick={() => window.open("https://wa.me/088271743968", "_blank")}
-              className=" shadow-cus bg-light/60 rounded-xl sm:rounded-2xl  flex items-center justify-center hover:scale-105 transition-transform ease-in-out hover:cursor-pointer"
-            >
-              <img src="wa2.png" alt="" className="object-cover relative p-2.5" />
-            </button>
-          </motion.div>
+          {ContactList.map((list) => (
+            <motion.div
+              key={list.id}
+              animate={{
+                scale: bodySectionIsInView ? [0, 1] : 0,
+                opacity: bodySectionIsInView ? 1 : 0
+              }}
+              transition={{ type: "spring", stiffness: 60, delay: list.delay }}
+              initial={{ opacity: 0.1 }}
+              className=" basis-14 lg:basis-16">
+              <button
+                onClick={() =>
+                  window.open(
+                    list.url,
+                    "_blank"
+                  )
+                }
+                className=" shadow-cus bg-light/60 rounded-xl sm:rounded-2xl flex items-center justify-center  hover:scale-105 transition-transform ease-in-out hover:cursor-pointer"
+              >
+                <img
+                  src={list.img}
+                  alt=""
+                  className="relative object-cover p-2.5"
+                />
+              </button>
+            </motion.div>
+          ))}
         </div>
       </div>
     </div>

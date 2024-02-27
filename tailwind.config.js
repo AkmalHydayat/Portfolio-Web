@@ -29,6 +29,17 @@ export default {
           "0%, 100%": { transform: "rotate(-3deg)" },
           "50%": { transform: "rotate(3deg)" },
         },
+        BounceCos: {
+          "0%, 100%, 50%": {
+            transform: "translateY(0)",
+          },
+          "25%": {
+            transform: "translateY(10%)",
+          },
+          "75%": {
+            transform: "translateY(-10%)",
+          },
+        },
         wiggleUpdate: {
           "0%, 100%": { transform: "rotate(-10deg)" },
           "50%": { transform: "rotate(10deg)" },
@@ -55,6 +66,7 @@ export default {
       },
       animation: {
         wiggle: "wiggle 1s ease-in-out infinite",
+        BounceCos: "BounceCos 1s linear infinite",
         wiggleUpdate: "wiggleUpdate 3s ease-in-out infinite",
         wiggleSlow: "wiggle 2s linear infinite",
         "spin-slow": "spin 15s linear infinite",

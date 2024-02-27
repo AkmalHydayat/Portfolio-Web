@@ -77,7 +77,10 @@ const AboutMe = () => {
     },
   ];
 
-
+  const handleDownloadResume = () => {
+    const pdfUrl = '/public/Document/Resume Akmal Hydayat.pdf';
+    window.open(pdfUrl, '_blank');
+  };
   return (
     <div
 
@@ -121,7 +124,7 @@ const AboutMe = () => {
             }}
             transition={{ type: "spring", stiffness: 60, delay: 0.4 }}
             initial={{ opacity: 0 }}
-            className=" md:flex md:items-center md:justify-center md:h-full  ">
+            className="mx-auto  flex flex-col items-center justify-center md:h-full  ">
             <div className="font-TitiliumWeb text-xl/6 lg:text-2xl/8 text-center md:max-w-[80%] ">
               Passionate and seasoned Web Developer with a strong focus on
               frontend development. Proficient in JavaScript and well-versed in
@@ -129,6 +132,15 @@ const AboutMe = () => {
               dedicated to delivering efficient, scalable, and visually
               appealing web applications.
             </div>
+            <button onClick={handleDownloadResume} className="flex space-x-3 w-fit items-center shadow-cus font-Atma mt-8 text-xl/6 lg:text-2xl/7 text-center bg-yellow px-3 py-1.5 rounded-md hover:scale-[1.02] transition-all ease-in-out group">
+              <div className="">View Resume</div>
+              <div className="w-[20px] h-[20px] animate-BounceCos">
+                <svg viewBox="0 0 600 600" fill="">
+                  <path d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V274.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V416c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z" />
+                </svg>
+
+              </div>
+            </button>
           </motion.div>
           <motion.div
 
@@ -138,7 +150,7 @@ const AboutMe = () => {
             }}
             transition={{ type: "spring", stiffness: 60, delay: 0.2 }}
             initial={{ opacity: 0 }}
-            className="relative flex justify-center -inset-y-36 md:-inset-y-60 lg:-inset-y-[240px] -z-10">
+            className="relative flex justify-center -inset-y-[200px] md:-inset-y-72 lg:-inset-y-[310px] -z-10">
             <img
               src="/Ellipse 11.png"
               alt=""

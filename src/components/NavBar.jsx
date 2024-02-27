@@ -91,7 +91,7 @@ const NavBar = ({ menuShow, handleMenuStatus }) => {
             </button>
             <div
               className={`${menuShow
-                ? "visible absolute md:static rounded-xl bg-yellow font-semibold md:bg-light py-3 md:py-0 opacity-100 h-fit mt-16 md:mt-0 md:font-medium scale-100 top-0  end-2 w-36  text-center md:visible md:top-0 md:end-0 md:z-0  md:w-fit md:text-end md:translate-x-0 md:translate-y-0 md:scale-100 md:opacity-100"
+                ? "visible absolute md:static rounded-xl bg-yellow   md:bg-light py-3 md:py-0 opacity-100 h-fit mt-16 md:mt-0  scale-100 top-0  end-2 w-36  text-center md:visible md:top-0 md:end-0 md:z-0  md:w-fit md:text-end md:translate-x-0 md:translate-y-0 md:scale-100 md:opacity-100"
                 : "invisible md:visible absolute top-0  md:static rounded-xl md:top-auto bg-yellow md:bg-transparent py-3 md:py-0 h-fit -end-5 md:end-0 -z-10 md:z-0 w-36 md:w-fit text-center md:text-end opacity-0 translate-x-2 md:translate-x-0 -translate-y-5 md:translate-y-0 scale-50 md:scale-100 md:opacity-100"
                 } md:block transition-all ease-in-out duration-200`}
             >
@@ -100,7 +100,7 @@ const NavBar = ({ menuShow, handleMenuStatus }) => {
                   <a
                     key={navbar.id}
                     href={navbar.link}
-                    className="hover:bg-blue md:hover:bg-transparent hover:text-white  py-1 md:py-0 md:hover:text-yellow md:hover:font-semibold  transition-all ease-in-out"
+                    className="hover:bg-blue md:hover:bg-transparent hover:text-white font-semibold md:font-medium py-1 md:py-0 md:hover:text-yellow md:hover:font-semibold transition-all ease-in-out"
                   >
                     {navbar.name}
                   </a>
