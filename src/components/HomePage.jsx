@@ -23,6 +23,7 @@ const HomePage = () => {
           >
             <img
               src="/Photo.webp"
+              loading="lazy"
               alt=""
               className="w-[250px] sm:w-[250px] md:w-[250px] lg:w-[300px] md:relative md:-end-8 lg:-end-0 "
             />
