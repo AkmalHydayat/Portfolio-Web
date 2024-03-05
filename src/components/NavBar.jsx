@@ -72,6 +72,7 @@ const NavBar = ({ menuShow, handleMenuStatus }) => {
           >
             <img
               id="logo"
+              loading="lazy"
               src="/Logo.webp"
               alt=""
               className="w-36 md:w-36 lg:w-40 "
