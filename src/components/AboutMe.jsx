@@ -13,67 +13,67 @@ const AboutMe = () => {
     {
       id: 1,
       name: "HTML",
-      img: "tech/html.png",
+      img: "tech/html.webp",
     },
     {
       id: 2,
       name: "CSS",
-      img: "tech/css.png",
+      img: "tech/css.webp",
     },
     {
       id: 3,
       name: "JavaScript",
-      img: "tech/javascript.png",
+      img: "tech/javascript.webp",
     },
     {
       id: 4,
       name: "ReactJs",
-      img: "tech/reactjs.png",
+      img: "tech/reactjs.webp",
     },
     {
       id: 5,
       name: "NodeJs",
-      img: "tech/nodejs.png",
+      img: "tech/nodejs.webp",
     },
     {
       id: 6,
       name: "ExpressJs",
-      img: "tech/expressjs.png",
+      img: "tech/expressjs.webp",
     },
     {
       id: 7,
       name: "MySkills",
-      img: "myskills.png",
+      img: "myskills.webp",
     },
     {
       id: 8,
       name: "NextJs",
-      img: "tech/nextjs.png",
+      img: "tech/nextjs.webp",
     },
     {
       id: 9,
       name: "Tailwind",
-      img: "tech/tailwind.png",
+      img: "tech/tailwind.webp",
     },
     {
       id: 10,
       name: "Bootstrap",
-      img: "tech/bootstrap.png",
+      img: "tech/bootstrap.webp",
     },
     {
       id: 11,
       name: "GitHub",
-      img: "tech/github.png",
+      img: "tech/github.webp",
     },
     {
       id: 12,
       name: "MySql",
-      img: "tech/mysql.png",
+      img: "tech/mysql.webp",
     },
     {
       id: 13,
       name: "Figma",
-      img: "tech/figma.png",
+      img: "tech/figma.webp",
     },
   ];
 
@@ -106,7 +106,7 @@ const AboutMe = () => {
           transition={{ type: "spring", stiffness: 60, delay: 0.2 }}
           initial={{ opacity: 0.1 }}
           className="relative flex justify-center -top-16 -z-10">
-          <img src="/head-bg.png" alt="" className="absolute" />
+          <img src="/head-bg.webp" alt="" className="absolute" />
         </motion.div>
 
 
@@ -151,7 +151,7 @@ const AboutMe = () => {
             initial={{ opacity: 0 }}
             className="relative flex justify-center -inset-y-[200px] md:-inset-y-72 lg:-inset-y-[310px] -z-10">
             <img
-              src="/Ellipse 11.png"
+              src="/Ellipse 11.webp"
               alt=""
               className="absolute w-40 md:w-60 opacity-60"
             />
@@ -214,7 +214,7 @@ const AboutMe = () => {
             initial={{ opacity: 0 }}
             className="relative  flex justify-center -inset-y-[340px] -inset-x-[6px] md:-inset-y-[330px] md:-inset-x-[4px] lg:-inset-y-[350px] lg:inset-x-1 -z-10">
             <img
-              src="/head-bg.png"
+              src="/head-bg.webp"
               alt=""
               className="absolute w-80 opacity-80 animate-spin-slow"
             />

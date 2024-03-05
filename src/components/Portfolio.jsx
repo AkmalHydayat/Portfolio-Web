@@ -8,7 +8,7 @@ const Portfolio = () => {
     {
       id: 1,
       name: "PosNout",
-      img: "posnout.png",
+      img: "posnout.webp",
       url: "https://posnout-static.vercel.app/",
       git: "https://github.com/AkmalHydayat/PosNout---Static",
       backgroundColor: "bg-[#8406be]",
@@ -18,109 +18,55 @@ const Portfolio = () => {
         {
           id: 1,
           name: "JavaScript",
-          img: "tech/javascript.png",
+          img: "tech/javascript.webp",
         },
         {
           id: 2,
           name: "ReactJs",
-          img: "tech/reactjs.png",
+          img: "tech/reactjs.webp",
         },
         {
           id: 3,
           name: "NodeJs",
-          img: "tech/nodejs.png",
+          img: "tech/nodejs.webp",
         },
         {
           id: 4,
           name: "ExpressJs",
-          img: "tech/expressjs.png",
+          img: "tech/expressjs.webp",
         },
         {
           id: 5,
           name: "Tailwind",
-          img: "tech/tailwind.png",
+          img: "tech/tailwind.webp",
         },
         {
           id: 6,
           name: "GitHub",
-          img: "tech/github.png",
+          img: "tech/github.webp",
         },
         {
           id: 7,
           name: "MySql",
-          img: "tech/mysql.png",
+          img: "tech/mysql.webp",
         },
         {
           id: 8,
           name: "React Router",
-          img: "tech/reactrouter.png",
+          img: "tech/reactrouter.webp",
         },
         {
           id: 9,
           name: "ChartJs",
-          img: "tech/chartjs.png",
+          img: "tech/chartjs.webp",
         },
-        // {
-        //   id: 10,
-        //   name: "ChartJs",
-        //   img: "tech/chartjs.png",
-        // },
-        // {
-        //   id: 11,
-        //   name: "ChartJs",
-        //   img: "tech/chartjs.png",
-        // },
-        // {
-        //   id: 12,
-        //   name: "ChartJs",
-        //   img: "tech/chartjs.png",
-        // },
-        // {
-        //   id: 13,
-        //   name: "ChartJs",
-        //   img: "tech/chartjs.png",
-        // },
-        // {
-        //   id: 14,
-        //   name: "ChartJs",
-        //   img: "tech/chartjs.png",
-        // },
-        // {
-        //   id: 15,
-        //   name: "ChartJs",
-        //   img: "tech/chartjs.png",
-        // },
-        // {
-        //   id: 16,
-        //   name: "ChartJs",
-        //   img: "tech/chartjs.png",
-        // },
-        // {
-        //   id: 17,
-        //   name: "ChartJs",
-        //   img: "tech/chartjs.png",
-        // },
-        // {
-        //   id: 18,
-        //   name: "ChartJs",
-        //   img: "tech/chartjs.png",
-        // },
-        // {
-        //   id: 19,
-        //   name: "ChartJs",
-        //   img: "tech/chartjs.png",
-        // },
-        // {
-        //   id: 20,
-        //   name: "ChartJs",
-        //   img: "tech/chartjs.png",
-        // },
+
       ],
     },
     {
       id: 2,
       name: "Web Profile",
-      img: "webprofile.png",
+      img: "webprofile.webp",
       url: "https://akmalhydayat.vercel.app/",
       git: "https://github.com/AkmalHydayat/Portfolio-Web",
       backgroundColor: "bg-[#E63946]",
@@ -130,34 +76,34 @@ const Portfolio = () => {
         {
           id: 1,
           name: "JavaScript",
-          img: "tech/javascript.png",
+          img: "tech/javascript.webp",
         },
         {
           id: 2,
           name: "ReactJs",
-          img: "tech/reactjs.png",
+          img: "tech/reactjs.webp",
         },
         {
           id: 3,
           name: "Tailwind",
-          img: "tech/tailwind.png",
+          img: "tech/tailwind.webp",
         },
         {
           id: 4,
           name: "Framer Motion",
-          img: "tech/framermotion.png",
+          img: "tech/framermotion.webp",
         },
         {
           id: 5,
           name: "GitHub",
-          img: "tech/github.png",
+          img: "tech/github.webp",
         },
       ],
     },
     {
       id: 3,
       name: "Diamond Store",
-      img: "diamondstore.png",
+      img: "diamondstore.webp",
       url: "https://akmalhydayat.github.io/Diamond-Store/",
       git: "https://github.com/AkmalHydayat/Diamond-Store",
       backgroundColor: "bg-[#FF5F04]",
@@ -167,27 +113,27 @@ const Portfolio = () => {
         {
           id: 1,
           name: "HTML",
-          img: "tech/html.png",
+          img: "tech/html.webp",
         },
         {
           id: 2,
           name: "CSS",
-          img: "tech/css.png",
+          img: "tech/css.webp",
         },
         {
           id: 3,
           name: "JavaScript",
-          img: "tech/javascript.png",
+          img: "tech/javascript.webp",
         },
         {
           id: 4,
           name: "Bootstrap",
-          img: "tech/bootstrap.png",
+          img: "tech/bootstrap.webp",
         },
         {
           id: 5,
           name: "GitHub",
-          img: "tech/github.png",
+          img: "tech/github.webp",
         },
       ],
     },
@@ -262,7 +208,7 @@ const Portfolio = () => {
           }}
           transition={{ type: "spring", stiffness: 60, delay: 0.2 }}
           initial={{ opacity: 0.1 }} className="relative flex justify-center -top-16 -z-10">
-          <img src="/head-bg.png" alt="" className="absolute" />
+          <img src="/head-bg.webp" alt="" className="absolute" />
         </motion.div>
       </div>
 
@@ -283,7 +229,7 @@ const Portfolio = () => {
               } border border-blackopacity rounded-lg flex shadow-cus2 h-[320px] sm:h-[430px] w-[300px] sm:w-[430px] justify-center items-center`}
           >
             <img
-              src="Background2.png"
+              src="Background2.webp"
               alt=""
               className=" h-[410px] w-[400px] sm:w-[500px] sm:h-[500px]  lg:w-[550px] delay-0 lg:h-[550px] opacity-60 brightness-[0.9] contrast-[1.1] absolute"
             />
@@ -307,12 +253,14 @@ const Portfolio = () => {
                       </div>
                     </div>
                     <div className="flex justify-end space-x-1 font-Atma items-center w-3/5 mb-1 sm:mb-[px]">
-                      <button onClick={() =>
-                        project.url ? window.open(
-                          project.url,
-                          "_blank"
-                        ) : null
-                      } className="bg-yellow w-full h-full rounded-md relative text-xs sm:text-sm flex justify-center items-center hover:cursor-pointer hover:shadow-sm sm:hover:shadow-md font-normal lg:font-medium">
+                      <button
+                        aria-label="Button Live Preview"
+                        onClick={() =>
+                          project.url ? window.open(
+                            project.url,
+                            "_blank"
+                          ) : null
+                        } className="bg-yellow w-full h-full rounded-md relative text-xs sm:text-sm flex justify-center items-center hover:cursor-pointer hover:shadow-sm sm:hover:shadow-md font-normal lg:font-medium">
                         Live Preview
                         <span className="ms-1 sm:ms-2">
                           <svg
@@ -324,12 +272,14 @@ const Portfolio = () => {
                           </svg>
                         </span>
                       </button>
-                      <button onClick={() =>
-                        project.git ? window.open(
-                          project.git,
-                          "_blank"
-                        ) : null
-                      } className={` ${project.git ? "bg-blue hover:cursor-pointer hover:shadow-sm sm:hover:shadow-md" : "bg-slate-700 contrast-75 hover:cursor-default"}  w-full h-full rounded-lg text-[#fff] relative text-xs sm:text-sm flex justify-center items-center   font-light lg:font-normal`}>
+                      <button
+                        aria-label="Button Source Code"
+                        onClick={() =>
+                          project.git ? window.open(
+                            project.git,
+                            "_blank"
+                          ) : null
+                        } className={` ${project.git ? "bg-blue hover:cursor-pointer hover:shadow-sm sm:hover:shadow-md" : "bg-slate-700 contrast-75 hover:cursor-default"}  w-full h-full rounded-lg text-[#fff] relative text-xs sm:text-sm flex justify-center items-center   font-light lg:font-normal`}>
                         Source Code
                         <span className="ms-1 sm:ms-2">
                           <svg
@@ -352,7 +302,7 @@ const Portfolio = () => {
                 {project.techStack.length > 7 ? (
                   <div className="pt-1.5 flex items-center h-[15%] sm:h-[12%] w-full space-x-1 sm:space-x-2 ">
                     <button
-                      aria-readonly="true"
+                      aria-label="Button Scroll Tech Stack"
                       className={` ${buttonLeft
                         ? "hover:bg-yellow cursor-pointer"
                         : "cursor-default"
@@ -387,6 +337,7 @@ const Portfolio = () => {
                       </div>
                     </div>
                     <button
+                      aria-label="Button Scroll Tech Stack"
                       className={` ${buttonRight
                         ? "hover:bg-yellow cursor-pointer"
                         : "cursor-default"

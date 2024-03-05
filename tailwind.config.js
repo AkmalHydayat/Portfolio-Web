@@ -63,9 +63,20 @@ export default {
             transform: "rotateY(180deg)",
           },
         },
+        customPing: {
+          "75%, 100% ": {
+            transform: "scale(2)",
+            opacity: "0",
+          },
+        },
       },
+
       animation: {
         wiggle: "wiggle 1s ease-in-out infinite",
+        customPing1: "customPing 1s cubic-bezier(0, 0, 0.2, 1) infinite 0s",
+        customPing2: "customPing 1s cubic-bezier(0, 0, 0.2, 1) infinite 0.25s",
+        customPing3: "customPing 1s cubic-bezier(0, 0, 0.2, 1) infinite 0.50s",
+        customPing4: "customPing 1s cubic-bezier(0, 0, 0.2, 1) infinite 0.75s",
         BounceCos: "BounceCos 1s linear infinite",
         wiggleUpdate: "wiggleUpdate 3s ease-in-out infinite",
         wiggleSlow: "wiggle 2s linear infinite",

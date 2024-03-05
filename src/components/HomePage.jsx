@@ -22,7 +22,7 @@ const HomePage = () => {
 
           >
             <img
-              src="/Photo.png"
+              src="/Photo.webp"
               alt=""
               className="w-[250px] sm:w-[250px] md:w-[250px] lg:w-[300px] md:relative md:-end-8 lg:-end-0 "
             />
@@ -66,10 +66,10 @@ const HomePage = () => {
               initial={{ opacity: 0 }}
 
             >
-              <h5 className="font-TitiliumWeb px-10 mt-2 md:mt-1 font-light lg:font-extralight text-[17px]/none md:text-[17px]/none lg:text-[24px] sm:px-28 md:px-0 md:w-96 lg:w-[500px] ">
+              <div className="font-TitiliumWeb px-10 mt-2 md:mt-1 font-light lg:font-extralight text-[17px]/none md:text-[17px]/none lg:text-[24px] sm:px-28 md:px-0 md:w-96 lg:w-[500px] ">
                 Building Bridges Between Design and Development. Designing
                 Tomorrow's Web Today.
-              </h5>
+              </div>
             </motion.div>
 
             <motion.div
@@ -80,7 +80,8 @@ const HomePage = () => {
             >
               <div className="relative flex justify-center -top-36 md:justify-start md:start-14 md:-top-44 lg:-top-56 lg:start-28 -z-10">
                 <img
-                  src="/Ellipse 11.png"
+                  src="/Ellipse 11.webp"
+                  alt=""
                   className="absolute w-48 md:w-56 lg:w-64"
                 />
               </div>
