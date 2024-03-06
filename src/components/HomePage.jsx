@@ -7,7 +7,7 @@ const HomePage = () => {
   const scrollRef = useRef(null);
   const isInView = useInView(scrollRef)
   return (
-    <div ref={scrollRef}>
+    <div ref={scrollRef} loading="lazy">
       <div
         id="homepage"
         className="h-fit  flex items-center flex-col  md:flex-row md:justify-between mt-28 md:my-[120px] lg:my-[136px]"
