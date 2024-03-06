@@ -59,6 +59,7 @@ const NavBar = ({ menuShow, handleMenuStatus }) => {
         initial={{ opacity: 1 }}
       >
         <div
+          loading="lazy"
           className={`${scroll
             ? "bg-light/95  shadow-md translate-y-0"
             : "bg-light/95 shadow-none -translate-y-0.5"
