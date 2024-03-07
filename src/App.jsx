@@ -13,30 +13,30 @@ function App() {
     setMenuShow(status);
   };
   return (
-    <>
-      <div
-        id="container"
-        onClick={(e) => {
-          if (e.target.id !== "nav-menu" && menuShow === true) {
-            setMenuShow(false);
-          }
-        }}
-        className=" overflow-hidden "
-      >
-        <Suspense fallback={<Loading />}>
-          <NavBar menuShow={menuShow} handleMenuStatus={handleMenuStatus} />
-          <div className="max-w-[90%] md:max-w-[90%] lg:max-w-[85%] mx-auto ">
-            <HomePage />
-            <AboutMe />
-            <Portfolio />
-            <Contact />
-          </div>
-          <Footer />
-        </Suspense>
 
-      </div>
+    <div
+      id="container"
+      onClick={(e) => {
+        if (e.target.id !== "nav-menu" && menuShow === true) {
+          setMenuShow(false);
+        }
+      }}
+      className=" overflow-hidden max-w-screen-2xl"
+    >
+      <Suspense fallback={<Loading />}>
+        <NavBar menuShow={menuShow} handleMenuStatus={handleMenuStatus} />
+        <div className="max-w-[90%] md:max-w-[90%] lg:max-w-[85%] mx-auto ">
+          <HomePage />
+          <AboutMe />
+          <Portfolio />
+          <Contact />
+        </div>
+        <Footer />
+      </Suspense>
 
-    </>
+    </div>
+
+
   );
 }
 

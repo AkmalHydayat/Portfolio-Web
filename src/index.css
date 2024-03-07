@@ -8,3 +8,8 @@ html {
   background-color: #e9ebea;
   scroll-behavior: smooth;
 }
+
+#root {
+  display: flex;
+  justify-content: center;
+}
