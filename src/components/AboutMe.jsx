@@ -129,7 +129,7 @@ const AboutMe = () => {
               appealing web applications.
             </div>
             <button onClick={() => window.open(
-              "https://drive.google.com/file/d/1foOeu2zhiDupeuTZ-jhGpUyghlp7pyR_/view",
+              "https://drive.google.com/file/d/1CAsnhq9Y4LrisMCGFxiP9D_4mjrhS1ms/view?usp=drive_link",
               "_blank"
             )} className="flex space-x-3 w-fit items-center shadow-cus font-Atma mt-8 text-xl/6 lg:text-2xl/7 text-center bg-yellow px-3 py-1.5 rounded-md hover:scale-[1.02] transition-all ease-in-out group">
               <div className="">View Resume</div>
